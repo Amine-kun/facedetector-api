@@ -26,7 +26,7 @@ const app = express();
  app.use(bodyParser.json());
 
  app.get('/', (req, res)=>{
- res.send(tempdatabase.users);
+ res.send("app is running");
  })
 
 
@@ -119,6 +119,8 @@ const app = express();
   
  
 
- app.listen(3001)
+ app.listen(process.env.PORT || 3001, ()=>{
+    console.log("server is running")
+ })
 
 
